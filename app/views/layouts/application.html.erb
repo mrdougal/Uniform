@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= yield :title %> Computers Now</title>
+
+	<%= stylesheet_link_tag :compnow %>
+	<%= stylesheet_link_tag :plugins %>
+	
+	<%= render :partial => 'shared/inc/ie6_warning' %>
+	<%= javascript_include_tag 'jquery','plugins/fixedtableheader-1-0-2.min.js','application' %>
+
+	
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+	
+	<%= render :partial => 'shared/inc/development' if Rails.env == 'development' %>
+	
+	<%= yield :ie6_warning %>
+	
+	<div id="top">
+		<div class="container">
+			
+			<!-- Navigation -->
+			<%= yield :navigation %>
+
+			<%= render 'shared/inc/menu' %>
+			<%= render 'shared/inc/cart' if display_cart? %>
+		</div>
+	</div>
+	
+
+	<div id="main">
+		<div class="container">
+			
+			
+			<!-- This is so we can have a nice white background -->
+			<div class="wrapper">
+				
+				<div id="header">
+					<div id="compnow">Compnow</div>
+					
+					<!-- <div id="adobe-logo">Adobe</div> -->
+					<%= yield :header %>
+					
+				</div>
+
+				<% flash.each do |key, message| %>
+				<%= content_tag :div, message, :class => "flash #{key}" %>
+				<% end %>
+				
+				<div id="content">
+					<%= yield %>
+				</div>
+
+				
+				
+				<div id="login_status">
+					<%= render logged_in? ? 'shared/inc/logged_in_as' : 'shared/inc/login_prompt' %>
+					<p>All prices shown are inc GST. E&amp;OE</p>
+				</div>
+				
+			</div> <!-- end of wrapper -->
+		</div> <!-- end of container -->
+	</div> <!-- end of main -->
+		
+		
+	<div id="footer">
+		<div class="container">
+			<%= render 'shared/inc/newfangled' %>
+		</div>
+	</div>
+		
+	
+	<!-- Only show analytics if we're running in production -->
+	<%= render :partial => 'shared/inc/google_analytics' if Rails.env == 'production' %>
+
+</body>
+</html>
+ 

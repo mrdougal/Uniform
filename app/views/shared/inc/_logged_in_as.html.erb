@@ -1,0 +1,11 @@
+
+
+<%= "Logged in as #{link_to current_user, user_url, { :title => "Edit your details" }}" %>
+
+<%= link_to 'Logout', logout_path, { :title => "Click to logout", 
+									 :class => "logout", 
+									 :id => "logout" } %>
+
+<!-- There is no admin section yet	 -->
+<%#= link_to 'Admin section', admin_url, { :title => "Go to the admin section", 
+										  :class => 'admin' } if current_user.admin? %>

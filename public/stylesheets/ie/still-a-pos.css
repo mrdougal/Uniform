@@ -1,0 +1,17 @@
+/*
+
+	IE only style
+	As even today, Internet Explorer is stil a POS	
+	
+*/
+
+#top ul, #top li {
+	display: inline;
+}
+
+#ie_warning {
+	background-color: #ff0020;
+	color: #fff;
+	padding-right: 10%;
+	padding-left: 10%;
+}

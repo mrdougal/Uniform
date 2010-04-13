@@ -1,0 +1,17 @@
+<% 
+	msg = 'Signup'
+	title msg
+	header msg %>
+
+<%= render :partial => 'form' %>
+
+
+
+<% content_for :side do %>
+
+
+<!-- Display message telling users that we will redirect them -->
+<%#= content_tag :div, "We will return you to the checkout once you have signed up", { :class => 'note'} if will_return_user_to_checkout? %>
+
+
+<% end %>

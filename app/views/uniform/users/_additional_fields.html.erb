@@ -1,0 +1,11 @@
+	
+	
+	<% f.inputs do "Contact details" %>
+	
+
+		<%= f.input :address, :input_html => { :rows => 3} %>
+		<%= f.input :suburb %>
+		<%= f.input :state, :as => :select, :collection => User.valid_states %>
+		<%= f.input :postcode %>
+  
+	<% end %>

@@ -1,0 +1,55 @@
+<% semantic_form_for(@user, :url => user_path) do |f| %>
+
+
+	<% f.inputs do %>
+
+	<%= f.input :name %>
+
+	<%= f.input :email, 
+				:hint => "We will send you a welcome email with a confirmation link to this address." %>
+
+	<%= f.input :phone_number %>
+
+	<% end %>
+
+	
+	<%= render :partial => 'additional_fields', :locals => { :f => f } unless @user.new_record? %>
+	
+
+	<% f.inputs do %>
+
+	<%= f.input :password, 
+				:hint => "Between 4 and 40 characters long please" %>
+			
+	<%= f.input :password_confirmation, 
+				:label => "Re-type password", 
+				:hint => "Both password fields need to match" %>
+
+	<% end %>
+
+
+
+	<!-- 
+		Only show this if this is a new record, as we only want to do this once.
+	 -->
+	<% if @user.new_record? %>
+
+		<% f.inputs do %>
+			<!-- For accepting the terms and conditions of CompNow -->
+			<%= f.input :terms_of_service, 
+						:label => "I agree to Computers Now standard #{ link_to 'Terms &amp; Conditions', Uniform.configuration.terms_url, {
+							:target => '_blank',
+							:title => 'View the terms and conditions'}
+						}", 
+						:as => :boolean,
+						:hint => "Please note : 
+								 Computers Now does not sell, 
+								 share or give your details to any other entity - ever. 
+								 We take your privacy seriously." %>
+		
+		<% end %>
+	<% end %>
+
+	<%= f.buttons %>
+
+<% end %>

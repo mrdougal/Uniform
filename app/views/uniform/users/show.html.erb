@@ -1,0 +1,21 @@
+<% 
+	title 'Your details'
+	header @user
+	
+	 %>
+
+<p><%= @user.email %></p>
+
+<p><%= link_to 'Edit your details', edit_user_path, {
+	:title => "Edit your details",
+	:class => "edit"  
+} %></p>
+
+
+
+
+<% content_for :side do %>
+	<!-- Give admins notice that they are an admin -->
+	<%= content_tag :p, "You are an admin", { :class => "note admin" } if @user.admin? %>
+
+<% end %>

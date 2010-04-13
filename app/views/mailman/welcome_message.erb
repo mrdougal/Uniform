@@ -1,0 +1,19 @@
+Welcome <%= @user %>,
+
+Thanks for signing up to the Computers Now Epson consumables ordering system.
+
+Please click on the link below to confirm your new account.
+<%= confirm_url(@user.activation_code, :host => Uniform.configuration.domain ) %>
+
+Computers Now also provide:
+- Colour Management services
+- Apple & HP Hardware 
+- Certified warranty repairs for Apple, HP & Epson
+- Specialist software for the creative industry
+
+Please do contact us regarding any of these services if you would like competitive pricing and excellent service. 
+
+For any queries, please email us on <%= Uniform.configuration.mailer_sender %> or call:
+
+02 9951 7979 - NSW
+03 9684 3633 - VIC

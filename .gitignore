@@ -1,0 +1,24 @@
+.DS_Store
+*.tmproj
+log
+tmp
+
+# Ignore the database config and deploy scripts
+config/database.yml
+config/deploy.rb
+Capfile
+
+# Ignore the test database
+*.sqlite3
+
+# Ignore the db dumps
+doc/sql dumps
+
+# As this plugin/engine is symlinked into this project
+vendor/plugins/appearance
+
+# Import stuff. Mainly csv files to be imported into the db
+import
+
+# Ignore notes on the project
+doc/notes

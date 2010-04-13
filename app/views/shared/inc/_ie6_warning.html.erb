@@ -1,0 +1,22 @@
+
+<!--[if lte IE 7]> 
+	<%= stylesheet_link_tag 'ie/still-a-pos' %>
+<![endif]-->
+
+
+<% content_for :ie6_warning do %>
+
+	<!--
+		Give the poor souls using IE 6 a message that this site's going to look ugly.
+		But I'm sure they think the internet in general looks ugly, it shouldn't be news to them.
+		
+	 -->
+		
+	<!--[if lte IE 6]>
+		<div id="ie_warning" class="warning">
+			This website may appear odd, because you are using an old version of Internet Explorer.
+			Please consider upgrading your browser.
+		</div>
+	<![endif]-->
+	
+<% end %>

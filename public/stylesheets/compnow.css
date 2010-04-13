@@ -1,0 +1,449 @@
+/* @override http://adobe.compnow.local/stylesheets/compnow.css */
+
+/* @group html elements */
+
+html {
+	background: #384a4e url(../images/assets/body_background.jpg) repeat-x 0 top;
+}
+
+body {
+	font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 13px;
+	text-align: left;
+}
+
+
+h1 {
+	font-size: 2.4em;
+	color: #000;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	line-height: 1em;
+}
+
+/* @group anchors */
+
+a {
+	text-decoration: none;
+}
+ 
+a:link {
+	color: #abc03f;
+	font-weight: bold;
+}
+ 
+a:visited {
+	color: #abc03f;
+	font-weight: bold;
+}
+ 
+a:active {
+	color: #ffffff;
+	font-weight: bold;
+}
+ 
+a:hover {
+	color: #d8e68f;
+	font-weight: bold;
+}
+
+a.current {
+	color: #aac13f;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+
+
+body {
+	line-height: 1.6em;
+}
+
+p {
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+}
+
+/* @group printer */
+
+.summary {
+	margin-bottom: 1em;
+	vertical-align: top;
+}
+
+.summary .image {
+	vertical-align: top;
+}
+
+.summary .description {
+	padding-left: 1em;
+	vertical-align: top;
+}
+
+
+
+/* @end */
+
+/* @group structure */
+
+.container {
+	min-width: 650px;
+}
+
+#top {
+	font-size: 14pt;
+	float: left;
+	width: 100%;
+	background: #000 url(../images/assets/catalogue_bar.jpg) repeat-x;
+	padding-top: 1em;
+}
+
+#top ul {
+	padding-left: 0;
+}
+
+#top a {
+	float: left;
+	padding: 0.6em 0.6em 1em;
+}
+
+a#logo {
+	margin-left: -105px;
+	padding-bottom: 0;
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+
+a#home {
+	margin-left: -80px;
+	margin-right: 0;
+	text-align: right;
+}
+
+#top a.current {
+	color: #fff;
+	background: url(/images/assets/catalogue_bar.jpg) repeat-x 0 -5px;
+}
+
+/* @group cart */
+
+#cart a {
+	background: url(../images/icons/general/cart-empty_x32.png) no-repeat 0 center;
+	display: block;
+	float: right;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+#cart a.full {
+	background: url(../images/icons/general/cart-full_x32.png) no-repeat 0 center;
+}
+
+
+
+/* @end */
+
+#main {
+	padding-bottom: 2em;
+	padding-top: 2em;
+	width: 100%;
+	float: left;
+}
+
+.flash {
+	border-bottom: 1em solid #fff;
+	padding-left: 2em;
+	display: block;
+	clear: both;
+	margin-top: -1em;
+	font-weight: bold;
+}
+
+#main .wrapper {
+	background-color: #fffeff;
+	float: left;
+	width: 100%;
+	-moz-border-radius: 10px;
+  	-webkit-border-radius: 10px;
+
+}
+
+/* @group header */
+
+#header {
+	background: url(../images/assets/header_background.png) repeat-x 0 bottom;
+	margin-bottom: 1em;
+	display: block;
+	float: left;
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+#compnow {
+	background: url(/images/assets/compnow_logo.png) no-repeat left top;
+	width: 100px;
+	height: 0;
+	overflow: hidden;
+	float: left;
+	margin-top: 2em;
+	margin-left: 2em;
+	padding-top: 50px;
+	margin-bottom: 1em;
+}
+
+
+#header h1 {
+	margin: 0;
+	display: block;
+	color: #000;
+	padding: 30px 150px 1em;
+	line-height: 1em;
+}
+
+#header h1 img {
+	margin: -10px 10px -20px -10px;
+}
+
+#header {
+	padding: 0;
+}
+
+
+
+/* @end */
+
+#content {
+	border-style: none;
+	padding: 0 0 2em 2em;
+	margin: 0;
+}
+
+#side {
+	margin: 0;
+	padding-bottom: 2em;
+	padding-right: 2em;
+	padding-top: 0;
+	width: 20%;
+	float: right;
+}
+
+#login_status {
+	display: block;
+	padding: 2em;
+	clear: both;
+
+}
+
+/* @end */
+
+/* @group classes */
+
+.note {
+	padding: 1em;
+	margin-bottom: 0.5em;
+	display: block;
+	background-color: #faffcb;
+	border-top: 5px solid #faf9aa;
+	margin-top: 0;
+}
+
+.block {
+	display: block;
+}
+
+.admin {
+	background-image: url(../images/icons/general/admin.png);
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+}
+
+ol.bullets {
+	list-style-type: decimal;
+	padding-left: 2em;
+}
+
+/* @end */
+
+/* @group cart/checkout process */
+
+th.empty_cart {
+	text-align: right;
+}
+
+a.checkout {
+	display: block;
+	margin-top: 0;
+	padding: 0.6em 0.6em 0.6em 0;
+	font-size: 200%;
+}
+
+/* @group checkout progress */
+
+#checkout-progress {
+	margin-bottom: 1em;
+	width: 100%;
+	display: block;
+	padding: 0;
+}
+
+#checkout-progress li {
+	display: inline;
+	margin-right: 1em;
+	color: #bfbfbf;
+}
+
+#checkout-progress li a.current {
+	border-bottom: 1px solid #abc03f;
+}
+
+
+
+/* @end */
+
+/* @group summary */
+
+.summary .quantity {
+	width: 30px;
+}
+
+.summary caption {
+	text-align: left;
+	font-weight: bold;
+}
+
+.summary .total {
+	text-align: right;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group list */
+
+.list {
+	float: left;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.list th {
+	border-bottom: 2px solid #ebebeb;
+	padding: .6em;
+	background-color: #fff;
+	vertical-align: bottom;
+}
+
+/* This is for the fixed header */
+
+.list .product a {
+	font-size: 12pt;
+}
+
+.list .price {
+	width: 100px;
+}
+
+.list .rrp {
+	text-decoration: line-through;
+}
+
+.list td.product-img {
+	padding-left: 0;
+}
+
+.list td.cart {
+	border-bottom-style: none;
+	border-top-style: none;
+	width: 100px;
+}
+
+.list th.cart {
+	border-bottom-style: none;
+}
+
+.list .large {
+	font-size: 14pt;
+}
+
+/* @group title */
+
+.list .version {
+	text-align: center;
+	width: 30px;
+}
+
+.list .license {
+	width: 160px;
+}
+
+.list .platform {
+	width: 120px;
+}
+
+.list .price {
+	width: 70px;
+}
+
+.list .title {
+	width: 200px;
+}
+
+.list th.title {
+	font-size: 14pt;
+	padding-left: 10px;
+}
+
+.list td.title {
+	font-weight: bold;
+	border-left-style: none;
+}
+
+.list td {
+	border-left: 1px dashed #ebebeb;
+	border-bottom: 1px solid #eaeaea;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+#newfangled {
+	background: url(../images/newfangled.png) no-repeat left center;
+	padding-left: 30px;
+	color: #fff;
+}
+
+#footer {
+	margin-top: -1em;
+}
+
+#development {
+	background-color: #c80000;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top: 1px solid #b00000;
+	color: #fefffe;
+	font-size: 9pt;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#side a.current {
+	color: #abc03f;
+	font-size: 14pt;
+}
+

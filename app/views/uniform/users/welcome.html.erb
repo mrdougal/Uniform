@@ -1,0 +1,18 @@
+<% 
+	msg = "Thanks for signing up #{@user.first_name}!"
+	title msg
+	header msg %>
+	
+
+<p>
+ 	We have sent an email to <strong><%= @user.email %></strong>.
+	Please check your email and click the confirmation link to complete signup. 
+</p>
+
+<% if @user.staff? %>
+	
+	<div class="note">
+		Please note that you will need to click the confirmation link, before you will be considered an admin.
+	</div>
+	
+<% end %>
