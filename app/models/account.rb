@@ -36,6 +36,14 @@ class Account < ActiveRecord::Base
   end
   
   
+  
+  # Give a list of industries
+  # Used to build the navigation, amongst other things
+  def self.adobe_industries
+    ['Commercial','Education','K12','Government']
+  end
+  
+  
   private
   
   # Strip excess whitespace from the name, so that we don't end up with similar looking accounts
