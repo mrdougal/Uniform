@@ -2,12 +2,7 @@ class Uniform::SessionsController < ApplicationController
 
   unloadable
 
-  # skip_before_filter :authenticate, :only => [:new, :create, :destroy]
-  # protect_from_forgery :except => :create
-  # filter_parameter_logging :password
-
   def new
-
     @session = UserSession.new   
   end
 
@@ -20,7 +15,8 @@ class Uniform::SessionsController < ApplicationController
       redirect_back_or_default
     else
       
-      flash[:notice] = @session.errors.on_base
+      # Show them some errors
+      flash[:notice] = @session.errors.on_base unless @session.errors.on_base.empty?
       render :action => 'new'
     end
   end
