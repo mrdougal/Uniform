@@ -4,10 +4,15 @@
 # need to inforce relationships between objects that use different database connections. (such as users having orders)
 # 
 class User < ActiveRecord::Base
+
+  # Where we define the default markup
+  cattr_accessor :default_markup
+  @@default_markup = 17
+
+
   
   # Flag so that admins can update details, and have them part incomplete
   attr_accessor :update_by_admin
-  
   attr_accessor :account_name
   
   acts_as_authentic
@@ -98,11 +103,9 @@ class User < ActiveRecord::Base
   # Used to calculate the prices of products
   def markup
     
-    if account
-      account.markup
-    else
-      nil
-    end
+    return account.markup if account && !account.markup.nil?
+    self.class.default_markup
+    
   end
   
   # Returns the bdm if there is one
