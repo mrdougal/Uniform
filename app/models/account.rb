@@ -17,6 +17,9 @@ class Account < ActiveRecord::Base
   # We only want to check the hansa_code if it's not blank?
   validates_uniqueness_of :hansa_code, :if => lambda { |a| !a.hansa_code.blank? }
   
+  validates_presence_of :adobe_industry
+  validates_presence_of :adobe_license
+  
   default_scope :order => 'name asc'
   
   
