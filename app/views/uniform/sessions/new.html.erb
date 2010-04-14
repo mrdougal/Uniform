@@ -1,26 +1,15 @@
 <% 
+
+	# We have the form in a partial, as not everything on this page will be relevant to all websites.
+	# eg: the control site, doesn't have a signup path, or a checkout path
+	
 	msg = 'Please login'
 	title msg
 	header msg
 	 %>
 
 
-
-<% semantic_form_for @session, :url => session_path do |f| %>
-	
-	<% f.inputs do %>
-		<%= f.input :email, 
-					:required => true %>
-
-		<%= f.input :password,
-					:required => true %>
-
-	<% end %>
-
-	<% f.buttons do %>
-		<%= f.commit_button 'Login' %>
-	<% end %>
-<% end %>
+<%= render :partial => 'uniform/sessions/form' %>
 
 
 <% content_for :side do %>
@@ -33,8 +22,8 @@
 </div>
 
 
-	<!-- Display message telling users that we will redirect them -->
-	<%= content_tag :div, t('login.return_user_to_checkout'), { :class => 'note'} if will_return_user_to_checkout? %>
+<!-- Display message telling users that we will redirect them -->
+<%= content_tag :div, t('login.return_user_to_checkout'), { :class => 'note'} if will_return_user_to_checkout? %>
 
 
 <% end %>
