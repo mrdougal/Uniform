@@ -21,7 +21,7 @@ module Uniform
       
       # Do we show the link to the cart
       def display_cart?
-        true
+        false
       end
 
       
