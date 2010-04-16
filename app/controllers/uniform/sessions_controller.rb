@@ -11,7 +11,7 @@ class Uniform::SessionsController < ApplicationController
     @session = UserSession.new(params[:user_session])
 
     if @session.save
-      flash[:notice] = "Welcome back #{current_user.first_name}"
+      flash[:notice] = "Welcome back #{@session.user.first_name}"
       redirect_back_or_default
     else
       
