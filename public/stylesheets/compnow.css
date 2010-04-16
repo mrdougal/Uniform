@@ -1,5 +1,3 @@
-/* @override http://adobe.compnow.local/stylesheets/compnow.css */
-
 /* @group html elements */
 
 html {
@@ -375,6 +373,11 @@ a.checkout {
 	font-size: 14pt;
 }
 
+.list .points {
+	width: 30px;
+	text-align: right;
+}
+
 /* @group title */
 
 .list .version {
@@ -383,7 +386,7 @@ a.checkout {
 }
 
 .list .license {
-	width: 160px;
+	width: 80px;
 }
 
 .list .platform {
@@ -395,7 +398,7 @@ a.checkout {
 }
 
 .list .title {
-	width: 200px;
+	width: 140px;
 }
 
 .list th.title {
