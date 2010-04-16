@@ -1,9 +1,11 @@
 Welcome <%= @user %>,
 
-Thanks for signing up to the Computers Now Epson consumables ordering system.
+Thanks for signing up to the Computers Now customer portal system.
 
 Please click on the link below to confirm your new account.
 <%= confirm_url(@user.activation_code, :host => Uniform.configuration.domain ) %>
+
+Once your account is activated you will be able to access both our Epson consumables store http://epson.compnow.com.au/ and our Adobe licensing portal http://adobe.compnow.com.au/
 
 Computers Now also provide:
 - Colour Management services
@@ -13,7 +15,7 @@ Computers Now also provide:
 
 Please do contact us regarding any of these services if you would like competitive pricing and excellent service. 
 
-For any queries, please email us on <%= Uniform.configuration.mailer_sender %> or call:
+For any queries, please email us on customerportal@compnow.com.au or call:
 
 02 9951 7979 - NSW
 03 9684 3633 - VIC
