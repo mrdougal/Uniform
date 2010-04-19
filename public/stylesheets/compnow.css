@@ -184,15 +184,13 @@ a#home {
 }
 
 #compnow {
-	background: url(/images/assets/compnow_logo.png) no-repeat left top;
-	width: 100px;
-	height: 0;
+	background: url(/images/assets/compnow.png) no-repeat left center;
+	width: 0;
 	overflow: hidden;
 	float: left;
-	margin-top: 2em;
-	margin-left: 2em;
-	padding-top: 50px;
-	margin-bottom: 1em;
+	height: 100px;
+	margin-left: 30px;
+	padding-left: 100px;
 }
 
 
