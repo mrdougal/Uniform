@@ -4,6 +4,7 @@ module Uniform
     attr_accessor :mailer_sender
     attr_accessor :terms_url
     attr_accessor :domain
+    attr_accessor :portal
 
     def initialize
       @mailer_sender = 'donotreply@example.com'
