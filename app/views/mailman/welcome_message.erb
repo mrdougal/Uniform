@@ -3,7 +3,7 @@ Welcome <%= @user %>,
 Thanks for signing up to the Computers Now customer portal system.
 
 Please click on the link below to confirm your new account.
-<%= confirm_url(@user.activation_code, :host => Uniform.configuration.domain ) %>
+<%= confirm_url(@user.activation_code, :host => Uniform.configuration.portal ) %>
 
 Once your account is activated you will be able to access both our Epson consumables store http://epson.compnow.com.au/ and our Adobe licensing portal http://adobe.compnow.com.au/
 
