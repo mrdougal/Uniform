@@ -30,6 +30,13 @@ module Uniform
       map.signup 'signup', :controller => 'uniform/users', :action => 'new'
       map.confirm 'confirm/:code', :controller => 'uniform/users', :action => 'activate'
       map.resource :user, :except => [:new ], :controller => 'uniform/users' 
+      
+      # We need the password reset links
+      map.resources :password_resets, 
+                    :except => [ :destroy, :index ], 
+                    :as => 'password-reset', 
+                    :controller => 'uniform/password_resets'
+      
     end
     
     def self.draw_cart_and_checkout_paths(map)
