@@ -1,0 +1,24 @@
+<% 
+	msg = 'Forgotten Password'
+	title msg
+	header msg
+ %>
+
+
+<p>
+	Fill out the form below, and we will email you instructions on how to reset your password.</p>
+
+
+<% semantic_form_for User.new, :url => password_resets_path do |f| %>
+
+	<% f.inputs do %>
+		<%= f.input :email %>
+	<% end %>
+
+	<% f.buttons do %>
+		<%= f.commit_button 'Reset my password' %>
+	<% end %>
+
+<% end %>
+
+	
