@@ -8,7 +8,15 @@ class Mailman < ActionMailer::Base
     
     from        Uniform.configuration.mailer_sender
     recipients  user.email
-    subject     'Welcome to the Computer Now portal'
+    subject     'Welcome to the Computers Now customer portal system'
+    body        :user => user
+  end
+  
+  def password_reset_instructions(user)
+    
+    from        Uniform.configuration.mailer_sender
+    recipients  user.email
+    subject     'Instructions for resetting your password on Computers Now customer portal system'
     body        :user => user
   end
   
@@ -32,5 +40,8 @@ class Mailman < ActionMailer::Base
     body        :user => quote.user, :quote => quote
     
   end
+  
+  
+  
   
 end
