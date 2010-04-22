@@ -1,9 +1,7 @@
-/* @override http://adobe.compnow.local/stylesheets/compnow.css */
-
 /* @group html elements */
 
 html {
-	background: #384a4e url(../images/assets/body_background.jpg) repeat-x 0 top;
+	background: #5e6d70 url(/images/assets/background.jpg) no-repeat right top;
 }
 
 body {
@@ -94,6 +92,8 @@ p {
 	min-width: 650px;
 }
 
+/* @group top */
+
 #top {
 	font-size: 14pt;
 	float: left;
@@ -129,6 +129,8 @@ a#home {
 	background: url(/images/assets/catalogue_bar.jpg) repeat-x 0 -5px;
 }
 
+/* @end */
+
 /* @group cart */
 
 #cart a {
@@ -146,6 +148,8 @@ a#home {
 
 
 /* @end */
+
+/* @group main */
 
 #main {
 	padding-bottom: 2em;
@@ -171,6 +175,8 @@ a#home {
   	-webkit-border-radius: 10px;
 
 }
+
+/* @end */
 
 /* @group header */
 
@@ -235,6 +241,53 @@ a#home {
 	clear: both;
 
 }
+
+/* @group left */
+
+#left {
+	width: 200px;
+	position: fixed;
+	top: 120px;
+}
+
+
+#left li a {
+	font-size: 10pt;
+	font-size: 8pt;
+	display: block;
+	padding: 5px 10px 5px 40px;
+	border-top: 1px solid #767676;
+	border-top: 1px solid rgba(168,176,178,0.25);
+	color: #adaeae;
+	text-transform: uppercase;
+	letter-spacing: 1pt;
+}
+
+#left li a:hover {
+	background-color: #526063;
+	color: #aabf3f;
+}
+
+#left li a.current {
+	color: #abc03f;
+	background-color: rgba(82,96,99,0.5);
+}
+
+.container {
+	margin-left: 200px;
+}
+
+#content {
+	padding-right: 20px;
+}
+
+#checkout #content {
+	width: 70%;
+}
+
+
+
+/* @end */
 
 /* @end */
 
