@@ -28,6 +28,15 @@ module Uniform
           return false
         end
       end
+      
+      def require_no_user
+        if logged_in?
+          flash[:notice] = "You need to be logged out access that page"
+          redirect_to login_path
+          return false
+          
+        end
+      end
 
       # AUTHLOGIC METHODS
 
