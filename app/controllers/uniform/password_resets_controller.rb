@@ -4,16 +4,22 @@ class Uniform::PasswordResetsController < ApplicationController
   before_filter :load_user_using_perishable_token, :only => [:edit, :update]
   before_filter :require_no_user
   
+  
   def new
-    render
+    
+  end
+  
+  def show
+    redirect_to edit_password_reset_path(params[:id])
   end
   
   def create
     
-    @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:user][:email])
     
     if @user
       
+      @user.reset_perishable_token!
       Mailman.deliver_password_reset_instructions(@user)
       
       flash[:notice] = "Instructions to reset your password have been emailed to you"
@@ -28,11 +34,12 @@ class Uniform::PasswordResetsController < ApplicationController
   end
   
   def edit
-    render
+
   end
 
   def update
     
+    @user.password = nil if params[:user][:password].blank?
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     
@@ -52,18 +59,20 @@ class Uniform::PasswordResetsController < ApplicationController
   private
 
 
-    def load_user_using_perishable_token
+  def load_user_using_perishable_token
 
-      @user = User.find_using_perishable_token(params[:id])
+    @user = User.find_by_perishable_token(params[:id])
 
-      unless @user
+    unless @user
+      
+      flash[:notice] = "We could not locate your account. " +
+                       "If you are having issues try copying and pasting the URL " +
+                       "from your email into your browser."
         
-        flash[:notice] = "We could not locate your account." +
-                         "If you are having issues try copying and pasting the URL " +
-                         "from your email into your browser."
-          
-        redirect_to root_url
-        
-      end
+      redirect_to root_url
+      
     end
+  end
+  
+  
 end
