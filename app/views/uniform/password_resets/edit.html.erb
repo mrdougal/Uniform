@@ -5,7 +5,10 @@
  %>
 
 
-<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
+<p>Hello <%= @user %>, enter in your new password, and we'll reset it for you.</p>
+
+
+<% semantic_form_for @user, :url => password_reset_path, :method => :put do |f| %>
   
 	<%= f.error_messages %>
 	<%= f.label :password %><br />
