@@ -88,7 +88,9 @@ class User < ActiveRecord::Base
     
     # This is protected, otherwise we would do 'update_attributes'
     self.admin = staff?
-    self.save
+    
+    # Don't fire callbacks
+    self.save(false)
   end
   
   def activated?
