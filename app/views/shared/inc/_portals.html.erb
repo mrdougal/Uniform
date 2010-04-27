@@ -1,0 +1,8 @@
+
+<ul>
+	<% ['Adobe','Epson'].each do |portal| %>
+	<li>
+		<%= link_to "#{portal} portal", "http://#{portal.downcase}.#{Uniform.configuration.domain}", :target => "_blank" %>
+	</li>
+	<% end %>
+</ul>

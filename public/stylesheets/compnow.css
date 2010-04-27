@@ -250,6 +250,10 @@ a#home {
 	top: 120px;
 }
 
+#left ul {
+	margin-bottom: 50px;
+}
+
 
 #left li a {
 	font-size: 10pt;
