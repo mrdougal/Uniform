@@ -7,5 +7,5 @@
 									 :id => "logout" } %>
 
 <!-- There is no admin section yet	 -->
-<%#= link_to 'Admin section', admin_url, { :title => "Go to the admin section", 
+<%= link_to 'Admin section', "http://control.#{Uniform.configuration.domain}", { :title => "Go to the admin section", 
 										  :class => 'admin' } if current_user.admin? %>
