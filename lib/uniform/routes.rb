@@ -13,6 +13,7 @@ module Uniform
       draw_session_paths(map)
       draw_signup_paths(map)
       draw_cart_and_checkout_paths(map)
+      draw_rescue_paths(map)
       
     end
     
@@ -52,6 +53,20 @@ module Uniform
       end
       
     end
+
+    def self.draw_rescue_paths(map)
+      
+      # Rescues, which are called internally by Apache
+      map.with_options :controller => "application" do |site|
+
+        site.connect 'rescues/404', :action => "not_found" 
+        site.connect 'rescues/403', :action => "not_allowed" 
+        site.connect 'rescues/422', :action => "change_rejected" 
+      end 
+
+      
+    end
+
 
   end
 end
