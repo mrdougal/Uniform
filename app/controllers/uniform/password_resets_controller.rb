@@ -39,6 +39,9 @@ class Uniform::PasswordResetsController < ApplicationController
 
   def update
     
+    # So that if other attributes are empty, we can still save
+    @user.update_by_admin = true
+    
     @user.password = nil if params[:user][:password].blank?
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
