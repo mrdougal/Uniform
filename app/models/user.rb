@@ -124,6 +124,12 @@ class User < ActiveRecord::Base
     bdm.email
   end
   
+  
+  # Records the portal that the user signed up on
+  def signup_portal
+    read_attribute[:signup_portal] ||= 'adobe'
+  end
+  
   # Used at signup
   def self.valid_states
     ['Victoria', 'New South Wales',
