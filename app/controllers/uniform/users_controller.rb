@@ -28,8 +28,11 @@ class Uniform::UsersController < ApplicationController
       # Log the user in now
       @session = UserSession.create(@user)
       
-      # Send the user a welcome message, (via delayed_job)
+      # Send the user a welcome message
       Mailman.deliver_welcome_message @user
+      
+      # Send a notification to CompNow
+      Mailman.deliver_notification_of_new_user
       
       # Send them back to what they tried to access before, 
       # or render a nice welcome message for the user

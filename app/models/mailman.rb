@@ -12,6 +12,14 @@ class Mailman < ActionMailer::Base
     body        :user => user
   end
   
+  def notification_of_new_user(user)
+
+    from        Uniform.configuration.mailer_sender
+    recipients  Uniform.configuration.mailer_sender
+    subject     "New customer portal user created"
+    body        :user => user
+  end
+  
   def password_reset_instructions(user)
     
     from        Uniform.configuration.mailer_sender
