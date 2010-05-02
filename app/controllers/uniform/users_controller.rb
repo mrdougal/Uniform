@@ -32,7 +32,7 @@ class Uniform::UsersController < ApplicationController
       Mailman.deliver_welcome_message @user
       
       # Send a notification to CompNow
-      Mailman.deliver_notification_of_new_user
+      Mailman.deliver_notification_of_new_user @user
       
       # Send them back to what they tried to access before, 
       # or render a nice welcome message for the user
