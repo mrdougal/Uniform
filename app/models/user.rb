@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   
   # Flag so that admins can update details, and have them part incomplete
   attr_accessor :update_by_admin
-  attr_accessor :account_name
+  # attr_accessor :account_name
   
   acts_as_authentic
   
