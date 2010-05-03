@@ -26,7 +26,8 @@ class User < ActiveRecord::Base
   
   # Required attributes
   validates_presence_of     :email, :name, :message => "This needs to be filled in" 
-  validates_presence_of     :account_name, :message => "We need to know who you work for" 
+  validates_presence_of     :account_name, :message => "We need to know who you work for", 
+                            :on => :create, :unless => :update_by_admin?
 
   # Password
   validates_presence_of     :password,                   :if => :password_required?
