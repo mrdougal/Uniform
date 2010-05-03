@@ -8,4 +8,4 @@
 
 <!-- There is no admin section yet	 -->
 <%= link_to 'Admin section', "http://control.#{Uniform.configuration.domain}", { :title => "Go to the admin section", 
-										  :class => 'admin' } if current_user.admin? %>
+										  :class => 'admin' } if current_user.is_admin? %>

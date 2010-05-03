@@ -11,7 +11,7 @@
 	<%= f.input :phone_number %>
 	
 	<%= f.input :account_name,
-	 			:label => "Company name" %>
+	 			:label => "Company name" unless @user.account %>
 
 	<% end %>
 
