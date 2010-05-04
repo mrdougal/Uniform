@@ -1,3 +1,9 @@
-You are not logged in.
-<%= link_to 'Login', login_path, { :title => "Login" } %> or
-<%= link_to 'Signup', signup_path, { :title => "Signup to be a member on the website" } %>
+<!-- Displayed if the user isn't logged in -->
+<div id="signin">
+	
+	<h2>
+		<%= link_to 'Login', login_path %> or 
+		<%= link_to 'signup', signup_path %> 
+		to access CompNow pricing
+	</h2>
+</div>
