@@ -94,6 +94,10 @@ p {
 
 /* @group top */
 
+a#home {
+	margin-left: 0;
+}
+
 #top {
 	font-size: 14pt;
 	float: left;
@@ -118,16 +122,33 @@ a#logo {
 	margin-bottom: -20px;
 }
 
-a#home {
-	margin-left: -80px;
-	margin-right: 0;
-	text-align: right;
+#top_left {
+	width: 200px;
+	float: left;
+	display: block;
+	padding-left: 10px;
 }
 
 #top a.current {
 	color: #fff;
 	background: url(/images/assets/catalogue_bar.jpg) repeat-x 0 -5px;
 }
+
+/* @group signin */
+
+#signin {
+	color: #faffcb;
+	float: right;
+	padding-top: 10px;
+}
+
+#top #signin a {
+	float: none;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* @end */
 
 /* @end */
 
@@ -139,6 +160,7 @@ a#home {
 	float: right;
 	margin-right: 0;
 	padding-left: 40px;
+	margin-left: 20px;
 }
 
 #cart a.full {
