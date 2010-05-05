@@ -1,3 +1,5 @@
+/* @override http://epson.compnow.com.au/stylesheets/compnow.css */
+
 /* @group html elements */
 
 html {
@@ -94,10 +96,6 @@ p {
 
 /* @group top */
 
-a#home {
-	margin-left: 0;
-}
-
 #top {
 	font-size: 14pt;
 	float: left;
@@ -122,11 +120,10 @@ a#logo {
 	margin-bottom: -20px;
 }
 
-#top_left {
-	width: 200px;
-	float: left;
-	display: block;
-	padding-left: 10px;
+a#home {
+	margin-left: -80px;
+	margin-right: 0;
+	text-align: right;
 }
 
 #top a.current {
@@ -160,7 +157,6 @@ a#logo {
 	float: right;
 	margin-right: 0;
 	padding-left: 40px;
-	margin-left: 20px;
 }
 
 #cart a.full {
