@@ -1,5 +1,6 @@
 class Bdm < User
   
-  default_scope :order => 'name asc', :conditions => ["admin = ?", true]
+  # Effectively only admins are considered BDM's
+  default_scope :order => 'name asc', :conditions => [ 'email LIKE ?', "%@compnow.com.au" ]
   
 end
