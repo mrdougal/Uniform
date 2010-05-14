@@ -33,6 +33,10 @@ class Mailman < ActionMailer::Base
     
     from        Uniform.configuration.mailer_sender
     recipients  quote.user.email
+    
+    # BCC the wildcard address, if the user doesn't have a bdm
+    bcc         Uniform.configuration.mailer_sender unless quote.user.bdm
+    
     reply_to    quote.user.bdm_email # If they hit reply it goes to the BDM
     subject     'Confirmation of your order'
     body        :quote => quote
