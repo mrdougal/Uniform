@@ -1,3 +1,336 @@
+/* @override http://adobe.compnow.local/stylesheets/base.css */
+
+.container {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.newfangled {
+	background: url(/images/newfangled.png) no-repeat 0 center;
+	padding-left: 24px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.inside {
+	padding: 1em;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* @group structure */
+
+/* @group nav */
+
+#nav {
+	float: left;
+	width: 100%;
+}
+
+#nav a {
+	float: left;
+	margin-right: 10px;
+	margin-left: -0.5em;
+	padding: .6em 1em 0.6em;
+}
+
+#nav a.current {
+	background-color: #e5e5e5;
+}
+
+
+
+/* @end */
+
+#main {
+	float: left;
+	width: 90%;
+}
+
+#content {
+	float: left;
+	border-bottom: 3px solid #cacaca;
+	border-right: 1px solid #cacaca;
+}
+
+#side {
+	width: 20%;
+	float: right;
+}
+
+#footer {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	float: left;
+	width: 100%;
+}
+
+/* @group flash */
+
+.flash {
+	padding: 1em;
+}
+
+.notice {
+	background-color: #faffcb;
+}
+
+.error, .failure {
+	background-color: #ff0020;
+	color: #fff;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group list */
+
+.list {
+	text-align: left;
+	width: 100%;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+
+.list thead th {
+	vertical-align: bottom;
+}
+
+.list caption {
+	text-align: left;
+	padding: 0.6em;
+}
+
+.list .code {
+	width: 60px;
+}
+
+.list .size {
+	width: 80px;
+}
+
+.list .weight {
+	width: 80px;
+}
+
+
+.list .category {
+	width: 80px;
+}
+
+.list .price {
+	width: 80px;
+	text-align: right;
+}
+
+.list .price_rrp {
+	width: 80px;
+	text-align: right;
+}
+
+.list .brand {
+	width: 80px;
+}
+
+.list thead th {
+	border-bottom: 2px solid #ebebeb;
+	padding: .6em;
+}
+
+.list tfoot th {
+	border-top: 2px solid #ebebeb;
+	padding: .6em;
+}
+
+.list td {
+	border-top: 1px solid #eaeaea;
+	vertical-align: top;
+	padding: .6em;
+}
+
+.list .first {
+	padding-left: 0;
+}
+
+.list .alt {
+}
+
+.list .product-img {
+	width: 40px;
+	text-align: center;
+}
+
+.list .product {
+	width: auto;
+}
+
+.list .cart {
+	width: 20px;
+}
+
+.list .total {
+	text-align: right;
+	padding-right: .6em;
+	width: 100px;
+}
+
+.list .quantity {
+	width: 30px;
+	text-align: right;
+}
+
+.list .quantity input {
+	width: 40px;
+	text-align: right;
+}
+
+.list a.delete {
+	width: 0;
+	overflow: hidden;
+	float: right;
+	margin-right: -25px;
+}
+
+
+
+/* @end */
+
+/* @group crud */
+
+.crud {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.crud a {
+	font-weight: normal;
+	font-style: normal;
+	margin-right: 10px;
+	background-position: 0 center;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+}
+
+a.new {
+	background: url(/images/icons/general/new.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+a.edit {
+	background: url(/images/icons/general/edit.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+a.delete {
+	background: url(/images/icons/general/delete.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+a.show {
+	background: url(/images/icons/general/show.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+a.www {
+	background: url(/images/icons/general/www.png) no-repeat left center;
+	padding-left: 20px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+a.logout {
+	background: url(/images/icons/general/logout.png) no-repeat left center;
+	padding-left: 20px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/* @end */
+
+/* @group pagination */
+
+div.pagination {
+	display: block;
+	float: left;
+	padding-top: .6em;
+	padding-bottom: .6em;
+}
+
+.pagination a {
+	padding: .6em;
+}
+
+.pagination .current {
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+}
+
+.pagination .disabled {
+	color: #cacaca;
+	padding: .6em;
+}
+
+
+
+/* @end */
+
+/* @group columns */
+
+.col-2 {
+	width: 45%;
+	float: left;
+	padding-right: 5%;
+}
+
+.col-3 {
+	float: left;
+	padding-right: 5%;
+	width: 27%;
+}
+
+
+
+/* @end */
+
+/* @group cart */
+
+a.add_product_to_cart {
+	background: url(/images/icons/general/cart_add.png) no-repeat center center;
+	width: 0;
+	overflow: hidden;
+	height: 40px;
+	display: block;
+	padding-left: 40px;
+	margin: -10px;
+}
+a.delete {
+
+}
+
+
+/* @end */
+
 /* @override http://epson.compnow.com.au/stylesheets/compnow.css */
 
 /* @group html elements */
@@ -192,6 +525,10 @@ a#home {
 	-moz-border-radius: 10px;
   	-webkit-border-radius: 10px;
 
+}
+
+#content.with_side {
+	width: 70%;	
 }
 
 /* @end */

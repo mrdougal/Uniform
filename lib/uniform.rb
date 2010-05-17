@@ -11,5 +11,5 @@ require 'uniform/helpers'
 
 ActionView::Base.send :include, Uniform::Helpers
 
-ActionView::Helpers::AssetTagHelper.register_stylesheet_expansion :compnow => ['reset','base', 'compnow']
+ActionView::Helpers::AssetTagHelper.register_stylesheet_expansion :compnow => ['reset', 'compnow']
 ActionView::Helpers::AssetTagHelper.register_stylesheet_expansion :plugins =>['plugins/formtastic','plugins/formtastic_changes']
